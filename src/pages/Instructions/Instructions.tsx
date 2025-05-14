@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import './Instructions.scss';
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Instructions = () => {
   const [selectedGame, setSelectedGame] = useState<string | null>(null);
   const [animateAdvice, setAnimateAdvice] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -28,12 +29,14 @@ const Instructions = () => {
             In this game, you must crush the mice that appear on the screen. You have 15 seconds!
           </p>
         );
-      case "quiz":
-        return (
-          <p className="game_explanation">
-            Think you know everything about cats? Prove it! Answer the questions and see if you're a cat expert.
-          </p>
-        );
+      // case "quiz":
+
+      //   return (
+
+      //     <p className="game_explanation">
+      //       Think you know everything about cats? Prove it! Answer the questions and see if you're a cat expert.
+      //     </p>
+      //   );
       default:
         return null;
     }
@@ -63,7 +66,7 @@ const Instructions = () => {
             <button onClick={() => setSelectedGame("catch")} className="game_button_instructions">
               Catch with your PURR
             </button>
-            <button onClick={() => setSelectedGame("quiz")} className="game_button_instructions">
+            <button onClick={() => navigate("/Quizz")} className="game_button_instructions">
               PURR-Quiz!
             </button>
           </div>
