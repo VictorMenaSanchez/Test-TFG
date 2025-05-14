@@ -1,0 +1,104 @@
+@import '../../styles/variables';
+@import '../../styles/components';
+@import '../../styles/global';
+
+//HomePage.scss
+
+.container_cats {
+    position: fixed;
+    top: calc(3vh + 80px); // espacio para cabecera + botones
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px;
+    max-width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+.container_cats>div {
+    min-width: 150px;
+    flex: 0 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.container_cats>div:hover {
+    transform: translateY(-5px);
+}
+
+.container_cats_status {
+    position: fixed;
+    top: calc(43vh + 80px); 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 2rem 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    overflow: hidden;
+}
+
+// Status
+
+.container_cats_status>div {
+    min-width: 160px;
+    flex: 0 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 17px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+
+.status-cat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.status-block p {
+    font-family: 'Press Start 2P', monospace;
+    font-weight: bold;
+}
+
+.icons-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.icons-row img {
+    width: 17px;
+    height: 17px;
+    object-fit: contain;
+}
